@@ -1,4 +1,4 @@
-SELECT COUNT(*) AS COUNT, weekday FROM (
+SELECT COUNT(*) AS count, weekday FROM (
   SELECT  
 	  case 
 		when DAYOFWEEK(STR_TO_DATE(concat(year(now()), '-', month(birthday), '-', DAYOFMONTH(birthday)), '%Y-%m-%d'))-1 = '0' then 'Воскресенье'
